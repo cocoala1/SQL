@@ -1,0 +1,23 @@
+/*
+ Countries and dependent territories, 2020
+ Data adapted from
+ http://www.worldometers.info/world-population/population-by-country/
+ Does not include rows that had "N.A." values, so some territories are missing.
+ */
+
+--displays the countries with less than 10,000,000 people 
+SELECT name, sum (population) as total_population FROM countries 
+GROUP BY population
+HAVING total_population<10000000;
+
+--displays the average population change rate 
+SELECT avg (population_change)
+FROM countries; 
+
+--displays the highest fertility rate count
+SELECT MAX(fertility_rate)
+FROM countries; 
+
+--displays the lowest fertility rate count 
+SELECT MIN(fertility_rate)
+FROM countries; 
