@@ -1,0 +1,31 @@
+--Create your own store database
+
+CREATE TABLE paint_colors (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, store_location TEXT); 
+
+INSERT INTO paint_colors VALUES (1, "Red", 16, 6.99, "store 1" ); 
+INSERT INTO paint_colors VALUES (2, "Blue", 26, 4.39, "store 2" );
+INSERT INTO paint_colors VALUES (3, "Yellow", 13, 6.25, "store 1" );
+INSERT INTO paint_colors VALUES (4, "Purple", 11, 7.99,"store 3");
+INSERT INTO paint_colors VALUES (5, "Pink", 16, 10.99, "store 2" );
+INSERT INTO paint_colors VALUES (6, "Magenta", 18, 8.75, "store 1" );
+INSERT INTO paint_colors VALUES (7, "Black", 34, 4.99, "store 2");
+INSERT INTO paint_colors VALUES (8, "Grey", 29, 7.50, "store 3");
+INSERT INTO paint_colors VALUES (9, "Turquoise", 19, 5.25, "store 1" );
+INSERT INTO paint_colors VALUES (10, "Brown", 66, 7.50, "store 2" );
+INSERT INTO paint_colors VALUES (11, "Violet", 55, 5.00, "store 2");
+INSERT INTO paint_colors VALUES (12, "Sage", 23, 3.50, "store 3" );
+INSERT INTO paint_colors VALUES (13, "Titian",36, 7.99, "store 3" );
+INSERT INTO paint_colors VALUES (14, "Cattleya", 46, 7.50, "store 3" );
+INSERT INTO paint_colors VALUES (15, "Smalt", 44, 6.00, "store 3" );
+
+SELECT * FROM paint_colors; 
+
+--display the database ordered by price. 
+SELECT * FROM paint_colors
+ORDER BY price asc; 
+
+--display the sum of total paint colors quaniites 
+SELECT id, SUM(quantity) FROM paint_colors
+
+
+ 
